@@ -2,6 +2,7 @@
 from sys import stdin, stdout
 from collections import Counter, OrderedDict
 import math
+import re
 cin = stdin.readline
 cout = stdout.write
 mp = lambda: list(map(int, cin().split()))
@@ -25,7 +26,7 @@ t, = mp()
 for _ in range(t):
 	s = cin()
 	n = len(s)
-	
+	'''
 	x = 500
 	y = 0
 
@@ -43,6 +44,14 @@ for _ in range(t):
 	else:
 		cout('yes\n')
 
+	'''
+	#using regex
+	x = re.search("[0,1]*11[0,1]*00[0,1]*", s)
+
+	if x:
+		cout('no\n')
+	else:
+		cout('yes\n')
 
 	
 
